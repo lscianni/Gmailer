@@ -32,7 +32,7 @@ namespace GmailerConsoleApplication
             else if (args.Length > 0 && args.Length <= 5 )
             {
                 string emailaddress = args[0];
-                string password = args[1]
+                string password = args[1];
                 string subject = args[2];
                 string recipient = args[3];
                 
