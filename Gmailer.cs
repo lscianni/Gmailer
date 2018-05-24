@@ -19,7 +19,6 @@ namespace GmailerConsoleApplication
     {
         static void Main(string[] args)
         {
-            var Passwd = new GetPasswd();
             var Msg = new MsgBody();
             
             if (args.Length == 0)
