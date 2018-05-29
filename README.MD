@@ -11,6 +11,9 @@ Specify an email address and password for the account to send from, as well as t
 ------
 gmailer.exe [emailaddress] [password] [subject] [recipient]
 
+#### To send to multiple recipients:
+gmailer.exe [emailaddress] [password] [subject] [recipient1,recipient2]
+
 ## Compilation:
 -------------
 csc.exe gmailer.cs

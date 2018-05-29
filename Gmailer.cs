@@ -35,6 +35,8 @@ namespace GmailerConsoleApplication
                 string subject = args[2];
                 string recipient = args[3];
                 
+
+                
                 try
                 {
                     MailMessage mail = new MailMessage();
@@ -42,7 +44,16 @@ namespace GmailerConsoleApplication
                     SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                     mail.From = new MailAddress(emailaddress);
-                    mail.To.Add(recipient);
+                    
+                    Char delimter = ',';
+                
+                    String[] substrings = recipient.Split(delimter);
+                
+                    foreach (var substring in substrings)
+                    {
+                        mail.To.Add(substring);
+                    }
+                    
                     mail.Subject = subject;
                     mail.Body = Msg.MsgRaw(); 
                     
